@@ -104,6 +104,38 @@
         }
 
     </style>
+    <style>
+        /* Default styles for larger screens */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background-color: lightblue;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Medium screens (tablets) */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                background-color: lightgreen;
+            }
+        }
+
+        /* Small screens (phones) */
+        @media (max-width: 480px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+                background-color: lightcoral;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -160,6 +192,7 @@ window.onload = function () {
 </html>
 </span>
          <mark>  <span id="birthday-message"></span></mark> 
+            <button id="zoomButton">حالت گوشی</button>
             <div class="menu-item" onclick="navigateTo('news.html')">
             <span>رویداد ها</span>
             </div>
@@ -186,10 +219,14 @@ window.onload = function () {
 
     <!-- Main Content -->
     <div class="main-content">
-        <h1>خوش آمدید</h1>
-        <p>به سایت دوستان خوش آمدید!</p>
+       
     </div>
-
+<script>
+        // Add an event listener to the button
+        document.getElementById('zoomButton').addEventListener('click', function () {
+            document.body.style.zoom = "50%"; // Set the zoom level to 50%
+        });
+    </script>
     <script>
         // Function to parse query parameters from the URL
         function getQueryParams() {
