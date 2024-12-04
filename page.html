@@ -192,7 +192,8 @@ window.onload = function () {
 </html>
 </span>
          <mark>  <span id="birthday-message"></span></mark> 
-            <button id="zoomButton">حالت گوشی</button>
+          <button id="mobileMode">حالت گوشی</button>
+    <button id="desktopMode">حالت دسکتاپ</button>
             <div class="menu-item" onclick="navigateTo('news.html')">
             <span>رویداد ها</span>
             </div>
@@ -221,10 +222,15 @@ window.onload = function () {
     <div class="main-content">
        
     </div>
-<script>
-        // Add an event listener to the button
-        document.getElementById('zoomButton').addEventListener('click', function () {
-            document.body.style.zoom = "50%"; // Set the zoom level to 50%
+ <script>
+        // Mobile mode button: Set zoom to 50%
+        document.getElementById('mobileMode').addEventListener('click', function () {
+            document.body.style.zoom = "50%";
+        });
+
+        // Desktop mode button: Reset zoom to 100%
+        document.getElementById('desktopMode').addEventListener('click', function () {
+            document.body.style.zoom = "100%";
         });
     </script>
     <script>
