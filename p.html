@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برنامه تولد</title>
+    <script src="https://cdn.jsdelivr.net/npm/jalaali-js/dist/jalaali.min.js"></script>
+    <script>
+        function checkBirthday() {
+            const birthdays = {
+                "1389/4/13": "امروز تولد آریاست",
+                "1389/6/19": "امروز تولد مصطفی ست",
+                "1389/4/18": "امروز تولد کسری ست",
+                "1389/7/8": "امروز تولد علیرضاست"
+            };
+
+            // Get today's Jalali date
+            const now = new Date();
+            const jalaliDate = jalaali.toJalaali(now);
+            const today = `${jalaliDate.jy}/${jalaliDate.jm}/${jalaliDate.jd}`;
+
+            // Find birthday message or fallback message
+            return birthdays[today] || "امروز تولد هیچکس نیست";
+        }
+
+        // Update the content of the span dynamically
+        window.onload = function () {
+            document.getElementById("birthday-message").textContent = checkBirthday();
+        };
+    </script>
+</head>
+<body style="font-family: 'Arial', sans-serif; text-align: center; margin-top: 20%;">
+    <h1>برنامه تولد</h1>
+    <p><span id="birthday-message"></span></p>
+</body>
+</html>

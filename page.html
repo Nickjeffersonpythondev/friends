@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه کاربری</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            margin: 0;
+            background: #333;
+            color: white;
+            display: flex;
+            direction: rtl;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: #444;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;
+        }
+
+        .sidebar h2 {
+            color: #ffcc00;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .sidebar img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 15px 0;
+            object-fit: cover;
+            border: 2px solid #ffcc00;
+        }
+
+        .sidebar input[type="file"] {
+            margin-top: 10px;
+            color: white;
+            cursor: pointer;
+            border: none;
+            background: #666;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        .sidebar p {
+            margin: 10px 0;
+            color: white;
+        }
+
+        /* Menu */
+        .menu {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .menu-item {
+            background: #555;
+            margin: 10px 0;
+            padding: 10px 15px;
+            width: 100%;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .menu-item:hover {
+            background: #ffcc00;
+            transform: scale(1.05);
+        }
+
+        .menu-item:active {
+            transform: scale(0.98);
+        }
+
+        .menu-item i {
+            margin-left: 10px;
+        }
+
+        .menu-item span {
+            margin-right: 10px;
+        }
+
+        .menu-item i,
+        .menu-item span {
+            font-size: 1.2rem;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 50px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>اطلاعات کاربری</h2>
+        <img id="profile-pic" src="https://via.placeholder.com/100?text=پروفایل" alt="تصویر پروفایل">
+        <input type="file" id="upload-pic" accept="image/*">
+        <p id="username"></p>
+        <p id="password"></p>
+
+        <!-- Menu -->
+        <div class="menu">
+           <span><!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shamsi Date Checker</title>
+    <script src="https://cdn.jsdelivr.net/npm/jalaali-js"></script> <!-- Jalaali JS for Shamsi Date -->
+</head>
+<body>
+    <span id="birthdayMessage">
+        <!-- The message will be inserted here -->
+    </span>
+
+    <script>
+        function checkBirthday() {
+    const birthdays = {
+        "1389/4/13": "امروز تولد آریاست",
+        "1389/6/19": "امروز تولد مصطفی ست",
+        "1389/4/18": "امروز تولد کسری ست",
+        "1389/7/8": "امروز تولد علیرضاست"
+    };
+
+    // Get today's Jalali date
+    const now = new Date();
+    const jalaliDate = jalaali.toJalaali(now);
+    const today = `${jalaliDate.jy}/${jalaliDate.jm}/${jalaliDate.jd}`;
+
+    // Find birthday message or fallback message
+    return birthdays[today] || "امروز تولد هیچکس نیست";
+}
+
+window.onload = function () {
+    document.getElementById("birthday-message").textContent = checkBirthday();
+};
+
+    </script>
+     <script src="https://cdn.jsdelivr.net/npm/jalaali-js/dist/jalaali.min.js"></script>
+    <script src="birthday.js"></script>
+    
+</body>
+</html>
+</span>
+         <mark>  <span id="birthday-message"></span></mark> 
+            <div class="menu-item" onclick="navigateTo('news.html')">
+            <span>رویداد ها</span>
+            </div>
+            <div class="menu-item" onclick="navigateTo('https://filebin.net/9gw1o3crcjtabxid')">
+            <span>گالری</span>
+            <i class="fa fa-cogs"></i>
+                </div>
+            <div class="menu-item" onclick="navigateTo('https://filebin.net/rz5j9ioce6qewavb')">
+          
+                <span>پلی لیست</span>
+                <i class="fa fa-cogs"></i>
+            </div>
+            <div class="menu-item" onclick="navigateTo('settings.html')">
+                <span>تنظیمات</span>
+                <i class="fa fa-cogs"></i>
+            </div>
+            <div class="menu-item" onclick="logout()">
+                <span>خروج</span>
+                <i class="fa fa-sign-out-alt"></i>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>خوش آمدید</h1>
+        <p>به سایت دوستان خوش آمدید!</p>
+    </div>
+
+    <script>
+        // Function to parse query parameters from the URL
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search.slice(1);
+            queryString.split('&').forEach(param => {
+                const [key, value] = param.split('=');
+                params[key] = decodeURIComponent(value || '');
+            });
+            return params;
+        }
+
+        // Get query parameters
+        const params = getQueryParams();
+        const username = params.username || '';
+        const password = params.password || '';
+        const profilePic = params.profilePic || '';
+
+        // If no username or password in URL, show loading message
+        if (!username || !password) {
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 2000);
+        }
+
+        // Validate user credentials (this is for demonstration purposes)
+        const validUsers = {
+            kasra: 'x9w8v7u6y5',
+            mostafa: 'z1y2x3w4v5',
+            Nick: 'w6v7u8y9z0',
+            alireza: 'q1r2s3t4p5'
+        };
+
+        // Check if the user credentials match
+        if (validUsers[username] !== password) {
+            setTimeout(() => {
+                window.location.href = 'index.html'; // Redirect to login page if credentials are wrong
+            }, 2000);
+        } else {
+            // If login is successful, display the username and password in sidebar
+            document.getElementById('username').textContent = `نام کاربری: ${username}`;
+            document.getElementById('password').textContent = `رمز عبور: ${password}`;
+
+            // Load profile picture from localStorage if it exists, or use default if not
+            let storedProfilePic = localStorage.getItem('profilePic');
+            if (storedProfilePic) {
+                document.getElementById('profile-pic').src = storedProfilePic;
+            } else if (profilePic) {
+                document.getElementById('profile-pic').src = profilePic;
+                localStorage.setItem('profilePic', profilePic); // Save profile picture to localStorage
+            }
+        }
+
+        // Handle profile picture upload
+        document.getElementById('upload-pic').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onloadend = function () {
+                    const newProfilePic = reader.result;
+                    document.getElementById('profile-pic').src = newProfilePic;
+
+                    // Save the new profile picture URL to localStorage
+                    localStorage.setItem('profilePic', newProfilePic);
+
+                    // Update URL with the hosted image link
+                    const newUrl = `?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}&profilePic=${encodeURIComponent(newProfilePic)}`;
+                    window.history.replaceState({}, '', newUrl);
+                };
+                reader.readAsDataURL(file); // Read the image file and convert to base64
+            }
+        });
+
+        // Function to handle navigation
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+
+        // Logout function
+        function logout() {
+            alert("با موفقیت خارج شدید!");
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <style>
+        /* Add some basic styling to ensure the iframe fills the page */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Embed the tlk.io chat page using an iframe -->
+    <iframe src="https://tlk.io/friendswebsite" title="Tlk.io Chat"></iframe>
+
+</body>
+</html>
+
+</html>
