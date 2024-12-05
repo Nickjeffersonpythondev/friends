@@ -1,10 +1,12 @@
 // User data
-const users = ['kasra', 'mostafa', 'Nick', 'alireza'];
+const users = ['kasra', 'mostafa', 'Nick', 'alireza', 'artin' , ilia];
 const passwords = {
     kasra: 'x9w8v7u6y5',
     mostafa: 'z1y2x3w4v5',
     Nick: 'w6v7u8y9z0',
-    alireza: 'q1r2s3t4p5'
+    alireza: 'q1r2s3t4p5',
+    artin: '1qaz2wsx' ,
+    ilia:'2wsx3edc'
 };
 
 // Login button handler
