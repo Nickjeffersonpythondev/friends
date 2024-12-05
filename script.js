@@ -5,7 +5,7 @@ const passwords = {
     mostafa: 'z1y2x3w4v5',
     Nick: 'w6v7u8y9z0',
     alireza: 'q1r2s3t4p5',
-    artin: '1qaz2wsx' ,
+    artin: '1qaz2wsx',
     ilia:'2wsx3edc'
 };
 
