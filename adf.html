@@ -83,4 +83,16 @@
     </div>
 
 </body>
+    <button id="mobileModeButton" class="px-6 py-2 bg-blue-500 text-white rounded-lg text-lg hover:bg-blue-600 transition-all">
+    حالت گوشی
+</button>
+
+<script>
+    document.getElementById('mobileModeButton').addEventListener('click', () => {
+        document.body.style.transform = 'scale(0.5)';
+        document.body.style.transformOrigin = 'top left';
+        document.body.style.width = '200%'; // Maintain layout
+    });
+</script>
+
 </html>
