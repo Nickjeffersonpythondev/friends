@@ -1,5 +1,5 @@
 // User data
-const users = ['kasra', 'mostafa', 'Nick', 'alireza', 'artin' , ilia];
+const users = ['kasra', 'mostafa', 'Nick', 'alireza', 'artin' , 'ilia'];
 const passwords = {
     kasra: 'x9w8v7u6y5',
     mostafa: 'z1y2x3w4v5',
