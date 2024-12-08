@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بازی ها</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function showAccountInfo() {
+            const username = document.getElementById('username').value;
+            let accountInfo = '';
+
+           if (username === 'mostafa') {
+    accountInfo = 'نام کاربری: mostafa_1111\nرمز عبور: qaz2wsx';
+} else if (username === 'kasra') {
+    accountInfo = 'نام کاربری: kasra_1111\nرمز عبور: qaz2wsx';
+} else if (username === 'artin') {
+    accountInfo = 'نام کاربری: artin_1111\nرمز عبور: qaz2wsx';
+} else if (username === 'alireza') {
+    accountInfo = 'نام کاربری: alireza_1111\nرمز عبور: qaz2wsx';
+} else if (username === 'ilia') {
+    accountInfo = 'نام کاربری: ilia_1111\nرمز عبور: qaz2wsx';
+} else {
+    accountInfo = 'نام کاربری نامعتبر است.';
+}
+
+
+            document.getElementById('account-info').textContent = accountInfo;
+        }
+    </script>
+</head>
+
+<body class="bg-gray-900 text-white">
+    <div class="flex justify-center items-center h-screen">
+        <div class="text-center">
+            <h1 class="text-3xl font-bold mb-6">بازی ها</h1>
+            <p>1-مافیا</p>
+            <button onclick="document.getElementById('form-container').classList.toggle('hidden')" class="bg-yellow-500 text-black py-2 px-4 rounded-lg hover:bg-yellow-400 transition duration-300">اطلاعات بیشتر و فرم ثبت نام</button>
+
+            <div id="form-container" class="hidden mt-8 p-6 bg-gray-800 rounded-lg shadow-lg">
+               
+                <a href="https://mafia.gg/game/59096943-3c58-4fe3-87a3-6c4bf6f7beec" class="block text-center bg-blue-600 py-2 px-4 rounded-lg hover:bg-blue-500 transition duration-300">پیوستن به بازی</a>
+
+                <div class="mt-8 p-4 bg-gray-700 rounded-lg">
+                    <h2 class="text-xl font-bold mb-4">نمایش اطلاعات حساب</h2>
+                    <h3>لطفا برای پیوستن به بازی نام کاربری خود را در فرم زیر وارد و اطلاعات کاربری را ببینید. سپس به <a href="https://mafia.gg/login" class="text-blue-400">mafia.gg/login</a> </h3>
+                    <h3>بروید و اطلاعات را وارد کنید و سپس با فشردن دکمه بالا وارد بازی شوید</h3>
+                  <mark>  <h2>زمان : پنجشنبه ها ساعت 20</h2></mark>
+                    <form onsubmit="event.preventDefault(); showAccountInfo();" class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <input type="text" id="username" class="mb-4 p-2 rounded-lg w-64 text-black" placeholder="نام کاربری " required>
+                        <button type="submit" class="bg-blue-600 py-2 px-4 rounded-lg hover:bg-blue-500 transition duration-300">نمایش اطلاعات حساب</button>
+                    </form>
+                    <div id="account-info" class="mt-6 p-4 bg-gray-600 rounded-lg text-left font-mono"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+    
+
+</html>
